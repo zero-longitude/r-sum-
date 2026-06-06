@@ -1,0 +1,158 @@
+%-------------------------
+% Resume in Jake's Resume Format
+% Lightweight version (no fontawesome)
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[margin=.6in]{geometry}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{tabularx}
+
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+%----------FONT----------
+\usepackage[T1]{fontenc}
+
+%----------PAGE STYLE----------
+\pagestyle{empty}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+%----------SECTION FORMATTING----------
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%----------CUSTOM COMMANDS----------
+\newcommand{\resumeItem}[1]{
+  \item\small{#1 \vspace{-2pt}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%
+%-------------------------------------------
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape \textbf{Kavi Mookherjee Amodt}} \\ \vspace{1pt}
+    \href{mailto:kmook@berkeley.edu}{\underline{kmook@berkeley.edu}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education and Coursework}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {UC Berkeley}{Until 2026}
+      {Computer Science, Cognitive Science; Linguistics Minor}{3.72 GPA}
+  \resumeSubHeadingListEnd
+
+  \vspace{-12pt}
+  \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+      \textbf{CS:} Probability and Random Processes (EECS 126), Artificial Intelligence (CS 188), Algorithms (CS 170), Computer Security (CS 161), Internet Architectures and Protocols (CS 168), Algorithmic Economics (CS 177), Computability and Complexity (CS 172), Econometrics (Econ 141), Computer Architecture (CS 61C), Data Structures (CS 61B), Discrete Math and Probability (CS 70), Linear Algebra (CS 56), Calculus (51/52), Statistics (2)
+    }}
+    \small{\item{
+      \textbf{Cognitive Science and Linguistics:} Courses in psychology, neuroscience, data science, and linguistics.
+    }}
+  \end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Software Engineering Intern}{2024}
+      {Tools for Humanity}{San Francisco, CA}
+      \resumeItemListStart
+        \resumeItem{Wrote Rust, Python, and Bash for an iris scanning device called the Orb.}
+        \resumeItem{Built Rust CLI tools for accessing Orb metrics.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Research Assistant}{2025--}
+      {Language and Cognitive Development Lab}{UC Berkeley}
+      \resumeItemListStart
+        \resumeItem{Built experiment for word-object learning models using dynamic field theory in MATLAB.}
+        \resumeItem{Wrote data processing scripts in Python.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Research Assistant}{2021--2023}
+      {UCSC Linguistics Department}{Santa Cruz, CA}
+      \resumeItemListStart
+        \resumeItem{Eyetracking research on underspecification, parsing of syntactic ambiguities.}
+        \resumeItem{Operated eye-tracker, worked with participants, collected data.}
+        \resumeItem{Worked with Amanda Rysling (UCSC), Jack Duff (UCLA).}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+  \resumeSubHeadingListStart
+     \resumeProjectHeading
+      {\textbf{Secure File Sharing System}}{}
+      \resumeItemListStart
+        \resumeItem{Designed and implemented a cryptographically secure file sharing system in Go. Tested in a fully adversarial server enviornment.}
+      \resumeItemListEnd
+    \resumeProjectHeading
+      {\textbf{Prediction Market Simulator}}{}
+      \resumeItemListStart
+        \resumeItem{Simulating and visualizing prediction markets with LMSR online learning algorithm in C++.}
+      \resumeItemListEnd
+    \resumeProjectHeading
+      {\textbf{Digit Classifier}}{}
+      \resumeItemListStart
+        \resumeItem{Implemented a neural network inference engine in RISC-V assembly, capable of classifying handwritten digits through matrix operations and ReLU activation.}
+      \resumeItemListEnd
+     \resumeProjectHeading
+      {\textbf{Wordle Bot}}{}
+      \resumeItemListStart
+        \resumeItem{Built an entropy-maximizing Wordle solver in Python that selects optimal guesses by maximizing Shannon information gain.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------SKILLS-----------
+\section{Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages:} Python, Go, C++, C, Java, R, RISC-V Assembly, SQL, Bash \\
+     \textbf{Libraries \& Frameworks:} PyTorch, NumPy, SciPy, pandas, Matplotlib \\
+     \textbf{Tools \& Platforms:} Git, Jupyter, Linux, Model Context Protocol (MCP) \\
+     \textbf{Domains:} Applied cryptography, information theory, probabilistic modeling, computer architecture, machine learning
+    }}
+ \end{itemize}
+
+%-------------------------------------------
+\end{document}
